@@ -5,7 +5,7 @@ ENV DEBIAN_FRONTEND noninteractive
 VOLUME ["/opt/mangos/etc", "/opt/mangos/data", "/opt/mangos/logs"]
 
 RUN apt-get update && \
-    apt-get install -y git cmake build-essential libssl-dev\
+    apt-get install -y mysql-client git cmake build-essential libssl-dev\
     libbz2-dev supervisor libace-dev libmysql++-dev liblua5.2-dev lua5.2 && \
     rm -rf /var/lib/apt/lists/*
 
